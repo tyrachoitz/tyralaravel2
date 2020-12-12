@@ -24,18 +24,18 @@
             <div class="masthead-subheading">Welcome To <br>Car Workshop Recommendation!</div>
             <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
             <div class="input-group mb-3">
+            @foreach ($services as $services)
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01"><b>Service Types</b></label>
                 </div>
                 <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Choose...</option>
-                  <option value="1">Car Repair and Maintenance</option>
-                  <option value="2">Aircond Service</option>
+                  <option selected>{{ $services->id }}</option>
+                  <!-- < option value="1">Car Repair and Maintenance</option>
                   <option value="3">Tyres</option>
-                  <option value="2">Spare Parts</option>
-                  <option value="3">Accessories</option>
+                  <option value="2">Spare Parts</option>-->
                 </select> &nbsp;
             </div>
+            @endforeach
                <br>
         <div>
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>

@@ -24,11 +24,32 @@ Route::get('/about', function () {
     
 });
 
+Route::get('/detail', function () {
+    
+    return view('detail');
+    
+});
+
 Route::get('/view', function () {
     return view('view',[
 
-    'workshop'=>App\Workshop::latest()->get()
+    'carwork'=>App\Carwork::latest()->get()
     ]);
 });
 
-Route::get('/workshop/{work}','WorkshopController@show');
+Route::get('/carwork/{car}','CarworksController@show');
+
+Route::get('/addcsv/view','CarworksController@addCsvView');
+Route::post('/addcsv/action', ['as' => 'carwork.add.csv', 'uses' => 'CarworksController@addCsv']);
+
+
+
+//Route::match(['GET', 'POST'], '/service/create', 'ServicesController@create')->name('service.create');
+Route::post('/service/view1', ['as' => 'service.create' ,'uses'=>'ServicesController@view']);
+Route::get('/service/view2', ['as' => 'viewMain', 'uses' => 'ServicesController@index']);
+
+
+
+//Route::match(['POST'], '/service/view', 'ServicesController@create')->name('service.create');
+
+//Route::get('/service/{service}', 'ServicesController@show');

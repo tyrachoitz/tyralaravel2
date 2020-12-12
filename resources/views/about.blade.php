@@ -11,7 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" >
             <ul class="navbar-nav text-uppercase ml-auto" class="nav nav-pills">
-                <li class="nav-item"><a  href="/">HomePage</a></li>
+                <li class="nav-item"><a  href="/service/create">HomePage</a></li>
                 
             </ul>
         </div>
@@ -22,60 +22,60 @@
     <section class="page-section" id="about" >
         <div class="container" >
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h2 class="section-heading text-uppercase">BENEFITS OF CARING FOR VEHICLES</h2>
+                <h3 class="section-subheading text-muted">Just want to give some awareness for everyone :)</h3>
             </div>
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/satu.jpg" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>2009-2011</h4>
-                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <h4>INCREASES SAFETY</h4>
+                            
                         </div>
-                        <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        <div class="timeline-body"><p class="text-muted">Keeping up on your routine car maintenance services will increase your safety while on the road. It will prevent parts from breaking and larger issues from arising</p></div>
                     </div>
                 </li>
                
                    
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/dua.jpg" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>March 2011</h4>
-                            <h4 class="subheading">An Agency is Born</h4>
+                            <h4>LESS MAINTENANCE COST</h4>
+                            
                         </div>
-                        <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        <div class="timeline-body"><p class="text-muted">For any kind of vehicles, maintenance cost is a very important aspect. For any proper car, the replacement cost of any important item is very high. That is why replacing costs can be reduced after performing proper maintenance</p></div>
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/tiga.jpg" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>December 2012</h4>
-                            <h4 class="subheading">Transition to Full Service</h4>
+                            <h4>EXTEND LIFESPAN</h4>
+                            
                         </div>
-                        <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        <div class="timeline-body"><p class="text-muted">The whole idea of a vehicle maintenance is to prevent rather than repair. Checking fluid levels, tire pressure, lights, brakes and battery on regular basis will not only ensure complete safety but will also extend lifespan of your vehicle. This consequently means that a well maintained car will serve you better and last longer as well</p></div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/empat.jpg" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>July 2014</h4>
-                            <h4 class="subheading">Phase Two Expansion</h4>
+                            <h4>SAVES TIME</h4>
+                            
                         </div>
-                        <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        <div class="timeline-body"><p class="text-muted">By staying on top of your maintenance schedule, you will be preventing larger issues which could keep your car from running. If you get really unlucky and have to deal with a huge auto repair issue, you may not be able to drive your car for days or even weeks</p></div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-image">
                         <h4>
-                            Be Part
+                            
                             <br />
-                            Of Our
+                            Thank You !
                             <br />
-                            Story!
+                            
                         </h4>
                     </div>
                 </li>
