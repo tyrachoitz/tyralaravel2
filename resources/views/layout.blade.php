@@ -18,20 +18,7 @@
     </head>
    <body id="page-top">
     <!-- Navigation-->
-    <nav  >
-        <div >
-            <!--<a class="navbar-brand js-scroll-trigger" href="/"><img src="assets/img/navbar-logo.svg" alt="" /></a>-->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-               
-            </button>
-            <div class="collapse navbar-collapse" >
-                <ul class="navbar-nav text-uppercase ml-auto" class="nav nav-pills">
-                    <li class="nav-item"><a  href="/">HomePage</a></li>
-                    <li class="nav-item"><a  href="/about">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
     @yield('content')
 
    </body>

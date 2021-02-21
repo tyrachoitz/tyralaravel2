@@ -11,7 +11,8 @@
                     
                 <div class="collapse navbar-collapse" >
                     <ul class="navbar-nav text-uppercase ml-auto" class="nav nav-pills">
-                        <li class="nav-item"><a  href="/service/create">HomePage</a></li>
+                        <li class="nav-item"><a href="javascript:history.back()" >Back</a></li>
+                        <li class="nav-item"><a  href="/service/main">HomePage</a></li>
                     </ul>
                 </div>
         </div>
@@ -22,13 +23,18 @@
     <section class="container" id="sc_workshop" align="center">
             <h2 class="section-heading text-uppercase"><b>DETAILS RECOMMENDATION WORKSHOP</b></h2><br><br>
             <div  align="center">
-                    <div class="col-md-3">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://fakeimg.pl/286x180/" alt="Card image cap">
+                    <div >
+                        <div class="card" style="width: 50rem;">
+                            <img class="card-img-top" src="{{asset($carwork->image_url)}}"  width="800" height="400">
                             <div class="card-body">
-                                <h5 class="card-title">SHOPNAME</h5>
-                                <p class="card-text">ADDRESS</p>
-                                <p class="card-text">PHONE NO</p>
+                                <h4 class="card-text">{{$carwork->Shopname}}</h4>
+                                <p class="card-text">{{$carwork->Address}}</p>
+                                <p class="card-text">{{$carwork->PhoneNo}}</p>
+                                <p class="card-text">{{number_format($rating,1)}} stars</p>
+                                <p class="card-text"><div class="mapouter"><div class="gmap_canvas">
+                                    <iframe width="600" height="300" id="gmap_canvas" src="{{$carwork->embeded_url}}" 
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/mapv2/"></a>
+                                        
                                
                             </div>
                         </div>
@@ -46,9 +52,9 @@
         </div>
     </footer>
    
-    <!-- Bootstrap core JS-->
+    <!-- Bootstrap core JS
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>-->
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Contact form JS-->

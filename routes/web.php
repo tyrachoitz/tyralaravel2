@@ -30,6 +30,18 @@ Route::get('/detail', function () {
     
 });
 
+Route::get('/gambar', function () {
+    
+    return view('gambar');
+    
+});
+
+Route::get('/try', function () {
+    
+    return view('try');
+    
+});
+
 Route::get('/view', function () {
     return view('view',[
 
@@ -37,7 +49,7 @@ Route::get('/view', function () {
     ]);
 });
 
-Route::get('/carwork/{car}','CarworksController@show');
+//Route::get('/carwork/{car}','CarworksController@show');
 
 Route::get('/addcsv/view','CarworksController@addCsvView');
 Route::post('/addcsv/action', ['as' => 'carwork.add.csv', 'uses' => 'CarworksController@addCsv']);
@@ -46,8 +58,9 @@ Route::post('/addcsv/action', ['as' => 'carwork.add.csv', 'uses' => 'CarworksCon
 
 //Route::match(['GET', 'POST'], '/service/create', 'ServicesController@create')->name('service.create');
 Route::post('/service/view1', ['as' => 'service.create' ,'uses'=>'ServicesController@view']);
-Route::get('/service/view2', ['as' => 'viewMain', 'uses' => 'ServicesController@index']);
+Route::get('/service/main', ['as' => 'viewMain', 'uses' => 'ServicesController@index']);
 
+Route::post('/carwork/{id}', ['as' => 'carwork.detail', 'uses' => 'CarworksController@show']);
 
 
 //Route::match(['POST'], '/service/view', 'ServicesController@create')->name('service.create');

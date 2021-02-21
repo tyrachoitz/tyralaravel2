@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnIntoTableCarworks extends Migration
+class AddImageUrlToCarworksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class AddColumnIntoTableCarworks extends Migration
      */
     public function up()
     {
-        //
         Schema::table('carworks', function (Blueprint $table) {
-            $table->string('embeded_url')->nullable();
-            $table->string('service_type')->nullable();
-            $table->string('PhoneNo')->nullable();
-
+            $table->string('image_url')->nullable();
         });
     }
 
@@ -29,11 +25,8 @@ class AddColumnIntoTableCarworks extends Migration
      */
     public function down()
     {
-        Schema::table('carworks', function($table) {
-            $table->dropColumn('embeded_url');
-            $table->dropColumn('service_type');
-            $table->dropColumn('PhoneNo');
+        Schema::table('carworks', function (Blueprint $table) {
+            $table->dropColumn('image_url');
         });
-        //
     }
 }

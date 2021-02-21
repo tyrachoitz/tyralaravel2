@@ -20,46 +20,6 @@ class ServicesController extends Controller
         $service = Services::all();
         $matchedResults = [];
 
-
-        //hanya masuk dlm if method == POST
-//      if(request()->isMethod('POST')){
-//          $isPost = true;
-//
-//          request()->validate([
-//              'service_id' => 'required|exists:services,id'
-//          ]);
-//
-//          $data = request()->input();
-//
-//          $client = new \GuzzleHttp\Client();
-//
-//          //pgil data dri engine
-//          $response = $client->request("POST", "http://localhost:8000/queries.json", [
-//              'json' => [
-//                  "user" => data_get($data, 'service_id'), // kena ambik dari name form input
-//                  "num" => 100, // result nk ambik
-//              ],
-//              'verify' => false,
-//              'headers' => [
-//                  'Content-Type' => 'application/json',
-//              ],
-//          ]);
-//
-//          $body = json_decode($response->getBody()->getContents());
-//
-//          if (!empty($body->itemScores)) {
-//              $matchedResults = collect($body->itemScores)->map(function($data) {
-//                  return [
-  //                     'workshop' => \App\Carwork::find($data->item),
-  //                     'score' => $data->score,
-  //                     'item' => $data->item,
-  //                 ];
-  //             })->unique('item')->sortByDesc('score');
-  //         }
-//
-//
-//       }
-
        
 
         return view('service.create',['service' => $service, 'matchedResults' => $matchedResults]);
@@ -68,9 +28,6 @@ class ServicesController extends Controller
 
     public function view(Request $request)
     {
-
-        
-
         $matchedResults = [];
 
 
@@ -98,10 +55,10 @@ class ServicesController extends Controller
         if (!empty($body->itemScores)) {
             $matchedResultsList = collect($body->itemScores)->map(function($data) {
                 return [
-                     'workshop' => \App\Carwork::find($data->item),
-                     'score' => $data->score,
-                     'item' => $data->item,
-                 ];
+                            'workshop' => \App\Carwork::find($data->item),
+                            'score' => $data->score,
+                            'item' => $data->item,
+                        ];
              })->unique('item')->sortByDesc('score');
          }
 
@@ -126,8 +83,6 @@ class ServicesController extends Controller
               $i++;
             }
           }
-
-       
 
         return view('service.view',[ 'matchedResults' => $matchedResults]);
 

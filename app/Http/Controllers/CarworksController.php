@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class CarworksController extends Controller
 {
-    public function show($car)
+    public function show(Request $req , $car)
    {
-      // dd($work);
        $carwork = Carwork::find($car);
-       return view('carwork.show', compact('carwork'));
+       $rating = $req->rating;
+       return view('detail', compact('carwork','rating'));
    }
 
    public function addCsvView(){
@@ -26,30 +26,7 @@ class CarworksController extends Controller
         $line_of_text[] = fgetcsv($file_handle, 0, ",");
     }
     fclose($file_handle);
-    
-
    
-
-
-//   foreach ($line_of_text as $carWorkDetail) {
-//
-//       $carwork = [];
-//       $carwork["service_type"] = $carWorkDetail[1];
-//       $carwork["Rating"] = $carWorkDetail[2];
-//       $carwork["Shopname"] = $carWorkDetail[3];
-//       $carwork["embeded_url"] = $carWorkDetail[4];
-//
-//
-//       $carworkmodel = new \App\Carwork;
-//       $carworkmodel->service_type = $carWorkDetail["1"];
-//       $carworkmodel->Shopname = $carWorkDetail["3"];                   
-//       $carworkmodel->Address = $carWorkDetail["Address"];                    
-//       $carworkmodel->Rating =  $carWorkDetail["2"];
-//       $carworkmodel->embeded_url = $carWorkDetail["embeded_url"];                                         
-//                    
-//       $carworkmodel -> save();
- //   }
-    
     $client = new \GuzzleHttp\Client();
     $i = 0;
 
@@ -73,7 +50,7 @@ class CarworksController extends Controller
                     "event" => "rate", // tukar jd rate
                     "entityType" => "user", // react as a service
                     "entityId" => $services->id, // id dalam table services, random set 1 dan 2
-                    "targetEntityType" => "item", // react as a workshop,store,homestay
+                    "targetEntityType" => "item", // react as a workshop
                     "targetEntityId" => $carwork->id, // id dalam table carworks, random set 1 - 6
                     "properties" => [
                         "rating" =>  (int)$carWorkDetail[2]// random give  raing 1-5

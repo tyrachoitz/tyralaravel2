@@ -11,8 +11,7 @@
             </button>
             <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav text-uppercase ml-auto" class="nav nav-pills">
-                    <li class="nav-item"><a  href="/service/create">HomePage</a></li>
-                    
+                    <li class="nav-item"><a  href="/service/main">HomePage</a></li>
                     
                 </ul>
             </div>
@@ -21,17 +20,32 @@
     
 
         <section class="container" id="sc_workshop">
-        <h2 class="section-heading text-uppercase">LISTS RECOMMENDATION WORKSHOPS</h2>
+        <h2 class="section-heading text-uppercase" align="center">LISTS RECOMMENDATION WORKSHOPS</h2>
+        <br><br>
             <div class="row">
                 @foreach($matchedResults as $result)
-                    <div class="col-md-3">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://fakeimg.pl/286x180/" alt="Card image cap">
+                    <div class="col-md-3" align="center">
+                        <div class="card" style="width: 17 rem; height: 34rem; padding-right: 0.75rem; " align="center" >
+                            <img  class="card-img-top" src="{{asset($result['workshop']->image_url)}}" alt="Card image cap" width="30" height="240">
                             <div class="card-body">
-                                <h5 class="card-title">{{$result['workshop']->Shopname}}</h5>
+                                <h6 class="card-title">{{$result['workshop']->Shopname}}</h6>
                                 <p class="card-text">{{$result['workshop']->Address}}</p>
                                 <p class="card-text">{{$result['workshop']->Rating}}</p>
-                                <a href="#" class="btn btn-primary">VIEW DETAIL</a>
+                                <p class="card-text">{{number_format($result['score'],1)}} stars</p>
+
+                                <form method="post" action="{{route('carwork.detail',['id' => $result['workshop']->id  ])}}">
+                                 @csrf 
+
+                                
+                                 <input type="hidden"  name="rating" value="{{$result['score']}}"/> 
+
+                                <br>
+                                
+                                <button input class="btn btn-primary" type="submit">VIEW DETAILS</button>
+                                <br>
+                                <br>
+                                </form>
+                               
                             </div>
                         </div>
                     </div>
